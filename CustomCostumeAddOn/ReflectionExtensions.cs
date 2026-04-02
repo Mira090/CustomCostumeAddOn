@@ -28,7 +28,8 @@ namespace CustomCostumeAddOn
                 costumeRelatedTable[costume.id] = new List<CostumeSkinEntity>();
             }
 
-            costumeSkinEntity.skinID += "_" + costumeRelatedTable[costume.id].Count;
+            if(costumeRelatedTable[costume.id].Count > 0)
+                costumeSkinEntity.skinID += "_" + costumeRelatedTable[costume.id].Count;
             costumeRelatedTable[costume.id].Add(costumeSkinEntity);
             costumeSkinDictionary[costumeSkinEntity.skinID] = costumeSkinEntity;
         }
