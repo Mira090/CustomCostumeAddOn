@@ -6,13 +6,13 @@ using System.Runtime.InteropServices;
 // 制御されます。アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyTitle("CostumeCostumeAddOn")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A mod that adds costume loading functionality to Sephiria.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Dynabook")]
-[assembly: AssemblyProduct("CostumeCostumeAddOn")]
-[assembly: AssemblyCopyright("Copyright © Dynabook 2026")]
+[assembly: AssemblyCompany("Mira")]
+[assembly: AssemblyProduct("CostumeCostume")]
+[assembly: AssemblyCopyright("Copyright © Mira 2026")]
 [assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCulture("ja-JP")]
 
 // ComVisible を false に設定すると、このアセンブリ内の型は COM コンポーネントから
 // 参照できなくなります。COM からこのアセンブリ内の型にアクセスする必要がある場合は、
