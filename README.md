@@ -1,26 +1,29 @@
 # CustomCostumeAddOn
 
-## 概要
+[한국어](README_ko-KR.md)<br>
+[日本語](README_ja-JP.md)
 
-TEAM HORAY の <a href="https://store.steampowered.com/app/2436940/_/">Sephiria</a> にコスチュームを追加できるようにする Mod です。
+## Overview
 
-MelonLoader や BepInEx などの **Mod ローダーは不要**で、Sephiria の Mod 読み込み機能を使用します。
+This mod allows you to add costumes to TEAM HORAY's <a href="https://store.steampowered.com/app/2436940/_/">Sephiria</a>.
 
-## インストール 
-1. Releases から最新の `CustomCostumeAddOn-1.X.X.zip` をダウンロードし、解凍してください。
-2. `Program Files (x86)\Steam\steamapps\common\Sephiria` フォルダ内に `AddOns` フォルダを作成してください。
-3. `Program Files (x86)\Steam\steamapps\common\Sephiria\AddOns` フォルダ内に `CustomCostume` フォルダをコピーしてください。
+**Mod loaders like MelonLoader or BepInEx are not needed**; this mod uses Sephiria's built-in mod loading functionality.
 
-## コスチューム作成
-- `StreamingAssets` フォルダの中の `Costume` フォルダ内に置いたコスチュームが読み込まれます。
-- コスチュームは `Metadata.json` と画像ファイルを含むフォルダで構成されます。
-- `Metadata.json` にはコスチュームの情報があります。 `animationData` で使用する画像ファイルの名前を指定する必要があります。
-- `costumeName` と `costumeFlavorText` はコスチュームの名前と説明文を書くことができます。翻訳を考慮する場合、ここに翻訳キーを書き、翻訳後の文章を書いた各言語の翻訳ファイルを追加する必要があります。
-- `stats` はコスチュームのステータス効果を指定できます。スラッシュ左側にステータスのID、右側に値を書きます。
-- `startingItems` はコスチュームの初期アイテムを指定できます。アイテムのID（数値）を書きます。
+## Installation
+1. Download the latest `CustomCostumeAddOn-1.X.X.zip` from Releases and extract it.
+2. Create an `AddOns` folder inside the `Program Files (x86)\Steam\steamapps\common\Sephiria` folder.
+3. Copy the `CustomCostume` folder into the `Program Files (x86)\Steam\steamapps\common\Sephiria\AddOns` folder.
 
-<a href="https://github.com/Mira090/CustomCostume">Custom Costume Mod</a> の Release にコスチュームの例があります。
+## Creating a costume
+- Costumes placed in the `Costume` folder within the `StreamingAssets` folder will be loaded.
+- A costume consists of a folder containing `Metadata.json` and image files.
+- `Metadata.json` contains costume information. You need to specify the name of the image file to be used in `animationData`.
+- `costumeName` and `costumeFlavorText` can be used to write the name and description of the costume. If translation is planned, you should write the translation key here and add translation files for each language in which the translated text will be written.
+- `stats` specifies the status effects of a costume. Write the status ID to the left of the slash and the value to the right.
+- `startingItems` allows you to specify the initial items for a costume. Enter the item ID (a numerical value).
 
-## 注意事項
-- このリポジトリおよびその貢献者は、Sephiria、TEAM HORAY、または関連団体とは一切関係がありません 
-- <a href="https://github.com/Mira090/CustomCostume">Custom Costume Mod</a> とは同時に使用しないでください。
+<a href="https://github.com/Mira090/CustomCostume">CustomCostume Mod</a> includes an example costume in its release.
+
+## Notes
+- This repository and its contributors maintain no affiliation with Sephiria, TEAM HORAY, or any associated entities.
+- Do not use this mod with <a href="https://github.com/Mira090/CustomCostume">CustomCostume Mod</a>.
