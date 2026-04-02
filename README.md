@@ -7,7 +7,7 @@ TEAM HORAY の <a href="https://store.steampowered.com/app/2436940/_/">Sephiria<
 MelonLoader や BepInEx などの **Mod ローダーは不要**で、Sephiria の Mod 読み込み機能を使用します。
 
 ## インストール 
-1. Releases から最新の `CustomCostumeAddOn.zip` をダウンロードし、解凍してください。
+1. Releases から最新の `CustomCostumeAddOn-1.X.X.zip` をダウンロードし、解凍してください。
 2. `Program Files (x86)\Steam\steamapps\common\Sephiria` フォルダ内に `AddOns` フォルダを作成してください。
 3. `Program Files (x86)\Steam\steamapps\common\Sephiria\AddOns` フォルダ内に `CustomCostume` フォルダをコピーしてください。
 
