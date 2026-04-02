@@ -39,7 +39,7 @@ namespace CustomCostumeAddOn
             Initialize();
             CostumeDatabase.Destroy();
             CostumeDatabase.Initialize();
-            LoadAllStartingItems(CostumeDatabase.GetAll());
+            LoadAllStartingItems();
         }
         public static void InitializeGameObjects(PlayerAvatarCostume example)
         {
@@ -106,11 +106,11 @@ namespace CustomCostumeAddOn
         {
             return GetAll().Select(x => x.ToSkin());
         }
-        public static void LoadAllStartingItems(IEnumerable<CostumeEntity> entities)
+        public static void LoadAllStartingItems()
         {
             if (Log)
                 Core.Log("Loading... CustomeCostume StartingItems");
-            foreach (var entity in entities)
+            foreach (var entity in CostumeDatabase.GetAll())
             {
                 if (metadataDictionary.ContainsKey(entity.id) && metadataDictionary[entity.id].startingItems != null)
                 {
