@@ -40,6 +40,7 @@ namespace CustomCostumeAddOn
             CostumeDatabase.Destroy();
             CostumeDatabase.Initialize();
             LoadAllStartingItems();
+            LoadAllStartingWeapons();
         }
         public static void InitializeGameObjects(PlayerAvatarCostume example)
         {
@@ -98,6 +99,10 @@ namespace CustomCostumeAddOn
         {
             return costumeDictionary.Values;
         }
+        public static IEnumerable<CustomCostumeMetadata> GetAllMetadata()
+        {
+            return metadataDictionary.Values;
+        }
         public static IEnumerable<CostumeEntity> CreateAll()
         {
             return GetAll().Select(x => x.ToNormal());
@@ -112,9 +117,56 @@ namespace CustomCostumeAddOn
                 Core.Log("Loading... CustomeCostume StartingItems");
             foreach (var entity in CostumeDatabase.GetAll())
             {
-                if (metadataDictionary.ContainsKey(entity.id) && metadataDictionary[entity.id].startingItems != null)
+                if (!metadataDictionary.ContainsKey(entity.id))
+                    continue;
+                var costume = metadataDictionary[entity.id];
+                if(costume.startingItems == null || costume.startingItems.Count == 0)
+                    continue;
+                var list = new List<ItemEntity>();
+                foreach(var item in costume.startingItems)
                 {
-                    entity.startingItems = metadataDictionary[entity.id].startingItems.Select(ItemDatabase.FindItemById).Where(x => x != null).ToArray();
+                    if(item is long id)
+                    {
+                        var itemEntity = ItemDatabase.FindItemById((int)id);
+                        if (itemEntity != null)
+                            list.Add(itemEntity);
+                    }
+                    else if (item is string name)
+                    {
+                        var itemEntity = ReflectionExtensions.FindItemByName(name);
+                        if (itemEntity != null)
+                            list.Add(itemEntity);
+                    }
+                }
+                entity.startingItems = list.ToArray();
+            }
+        }
+        public static void LoadAllStartingWeapons()
+        {
+            if (Log)
+                Core.Log("Loading... CustomeCostume StartingWeapons");
+            foreach (var entity in CostumeDatabase.GetAll())
+            {
+                if (!metadataDictionary.ContainsKey(entity.id))
+                    continue;
+                var costume = metadataDictionary[entity.id];
+                if (costume.defaultWeapon is long id)
+                {
+                    entity.defaultWeapon = WeaponDatabase.FindWeaponById((int)id);
+                    if(entity.defaultWeapon != null)
+                    {
+                        entity.onlyCanUseDefaultWeapon = costume.onlyCanUseDefaultWeapon;
+                        continue;
+                    }
+                }
+                else if (costume.defaultWeapon is string name)
+                {
+                    entity.defaultWeapon = ReflectionExtensions.FindWeaponByName(name);
+                    if (entity.defaultWeapon != null)
+                    {
+                        entity.onlyCanUseDefaultWeapon = costume.onlyCanUseDefaultWeapon;
+                        continue;
+                    }
                 }
             }
         }

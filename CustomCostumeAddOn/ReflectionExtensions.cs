@@ -10,6 +10,30 @@ namespace CustomCostumeAddOn
 {
     public static class ReflectionExtensions
     {
+        public static Dictionary<int, ItemEntity> GetItemDictionary()
+        {
+            return typeof(ItemDatabase).GetField("itemDictionary", BindingFlags.Static | BindingFlags.NonPublic).GetValue(typeof(ItemDatabase)) as Dictionary<int, ItemEntity>;
+        }
+        public static ItemEntity FindItemByName(this string name)
+        {
+            var itemDictionary = GetItemDictionary();
+            foreach(var item in itemDictionary.Values)
+            {
+                if (item.aName.ToString() == name)
+                    return item;
+            }
+            return null;
+        }
+        public static WeaponEntity FindWeaponByName(this string name)
+        {
+            var weapons = WeaponDatabase.GetAll();
+            foreach (var item in weapons)
+            {
+                if (item.aName.ToString() == name)
+                    return item;
+            }
+            return null;
+        }
         public static void RegisterCostumeSkin(CostumeSkinEntity costumeSkinEntity)
         {
             var costumeSkinDictionary = GetCostumeSkinDictionary();

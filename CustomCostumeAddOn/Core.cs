@@ -15,7 +15,13 @@ namespace CustomCostumeAddOn
             base.OnModLoaded();
             HorayModAPI.OnLoadCostumeDatabase += OnLoadCostumeDatabase;
             HorayModAPI.OnLoadItemDatabase += OnLoadItemDatabase;
+            HorayModAPI.OnLoadWeaponDatabase += OnLoadWeaponDatabase;
             CustomCostumeDatabase.Initialize();
+        }
+
+        private void OnLoadWeaponDatabase()
+        {
+            CustomCostumeDatabase.LoadAllStartingWeapons();
         }
 
         private void OnLoadItemDatabase()
@@ -36,6 +42,7 @@ namespace CustomCostumeAddOn
             base.OnModUnloaded();
             HorayModAPI.OnLoadCostumeDatabase -= OnLoadCostumeDatabase;
             HorayModAPI.OnLoadItemDatabase -= OnLoadItemDatabase;
+            HorayModAPI.OnLoadWeaponDatabase -= OnLoadWeaponDatabase;
             CustomCostumeDatabase.Destroy();
         }
         public static Sprite LoadSpritePath(string path)
