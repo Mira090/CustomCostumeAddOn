@@ -20,9 +20,9 @@
 - `Metadata.json`에는 의상 정보가 포함되어 있습니다. `animationData`에 사용할 이미지 파일의 이름을 지정해야 합니다.
 - `costumeName`과 `costumeFlavorText`를 사용하여 의상의 이름과 설명을 작성할 수 있습니다. 번역을 계획하고 있다면, 여기에 번역 키를 작성하고 번역된 텍스트가 포함될 각 언어에 대한 번역 파일을 추가해야 합니다.
 - `stats`는 의상의 상태 효과를 지정합니다. 슬래시 왼쪽에 상태 ID를, 오른쪽에 값을 입력합니다.
-- `startingItems`를 사용하면 의상의 초기 아이템을 지정할 수 있습니다. 아이템 ID(숫자 값)를 입력합니다.
+- `startingItems`를 사용하면 의상의 초기 아이템을 지정할 수 있습니다. 아이템 ID(숫자 값)를 입력합니다. (<a href="https://github.com/gjanwjstk/sephiria-fan-kit/blob/main/artifact_index.csv">아이템 ID 목록</a>)
 
-<a href="https://github.com/Mira090/CustomCostume">CustomCostume Mod</a>에는 릴리스에 예시 코스튬이 포함되어 있습니다.
+<a href="https://github.com/Mira090/CustomCostume/releases/tag/costume_example">여기</a> 의상 예시가 있습니다.
 
 ## 참고 사항
 - 이 저장소 및 기여자들은 Sephiria, TEAM HORAY 또는 관련 단체와 어떠한 관계도 없습니다.

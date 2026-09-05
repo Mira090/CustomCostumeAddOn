@@ -20,9 +20,9 @@ This mod allows you to add costumes to TEAM HORAY's <a href="https://store.steam
 - `Metadata.json` contains costume information. You need to specify the name of the image file to be used in `animationData`.
 - `costumeName` and `costumeFlavorText` can be used to write the name and description of the costume. If translation is planned, you should write the translation key here and add translation files for each language in which the translated text will be written.
 - `stats` specifies the status effects of a costume. Write the status ID to the left of the slash and the value to the right.
-- `startingItems` allows you to specify the initial items for a costume. Enter the item ID (a numerical value).
+- `startingItems` allows you to specify the initial items for a costume. Enter the item ID (a numerical value). (<a href="https://github.com/gjanwjstk/sephiria-fan-kit/blob/main/artifact_index.csv">List of Item IDs</a>)
 
-<a href="https://github.com/Mira090/CustomCostume">CustomCostume Mod</a> includes an example costume in its release.
+<a href="https://github.com/Mira090/CustomCostume/releases/tag/costume_example">Here</a> is an example of a costume.
 
 ## Notes
 - This repository and its contributors maintain no affiliation with Sephiria, TEAM HORAY, or any associated entities.
