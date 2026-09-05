@@ -22,7 +22,7 @@ TEAM HORAY の <a href="https://store.steampowered.com/app/2436940/_/">Sephiria<
 - `stats` はコスチュームのステータス効果を指定できます。スラッシュ左側にステータスのID、右側に値を書きます。
 - `startingItems` はコスチュームの初期アイテムを指定できます。アイテムのID（数値）を書きます。（<a href="https://github.com/gjanwjstk/sephiria-fan-kit/blob/main/artifact_index.csv">アイテムIDの一覧</a>）
 
-<a href="https://github.com/Mira090/CustomCostume/releases/tag/costume_example">ここ</a> にコスチュームの例があります。
+<a href="https://github.com/Mira090/CustomCostumeAddOn/releases/tag/costume_example">ここ</a> にコスチュームの例があります。
 
 ## 注意事項
 - このリポジトリおよびその貢献者は、Sephiria、TEAM HORAY、または関連団体とは一切関係がありません 

@@ -22,7 +22,7 @@
 - `stats`는 의상의 상태 효과를 지정합니다. 슬래시 왼쪽에 상태 ID를, 오른쪽에 값을 입력합니다.
 - `startingItems`를 사용하면 의상의 초기 아이템을 지정할 수 있습니다. 아이템 ID(숫자 값)를 입력합니다. (<a href="https://github.com/gjanwjstk/sephiria-fan-kit/blob/main/artifact_index.csv">아이템 ID 목록</a>)
 
-<a href="https://github.com/Mira090/CustomCostume/releases/tag/costume_example">여기</a> 의상 예시가 있습니다.
+<a href="https://github.com/Mira090/CustomCostumeAddOn/releases/tag/costume_example">여기</a> 의상 예시가 있습니다.
 
 ## 참고 사항
 - 이 저장소 및 기여자들은 Sephiria, TEAM HORAY 또는 관련 단체와 어떠한 관계도 없습니다.

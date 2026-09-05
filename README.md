@@ -22,7 +22,7 @@ This mod allows you to add costumes to TEAM HORAY's <a href="https://store.steam
 - `stats` specifies the status effects of a costume. Write the status ID to the left of the slash and the value to the right.
 - `startingItems` allows you to specify the initial items for a costume. Enter the item ID (a numerical value). (<a href="https://github.com/gjanwjstk/sephiria-fan-kit/blob/main/artifact_index.csv">List of Item IDs</a>)
 
-<a href="https://github.com/Mira090/CustomCostume/releases/tag/costume_example">Here</a> is an example of a costume.
+<a href="https://github.com/Mira090/CustomCostumeAddOn/releases/tag/costume_example">Here</a> is an example of a costume.
 
 ## Notes
 - This repository and its contributors maintain no affiliation with Sephiria, TEAM HORAY, or any associated entities.
